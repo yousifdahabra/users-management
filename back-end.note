@@ -1,0 +1,2 @@
+create new laravel project
+composer create-project --prefer-dist laravel/laravel laravel11-app "11.*"
