@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <Routes>
 
-          <Route path='/' elemment={<AdminDashboard/>}/>
+          <Route path='/test' element={<AdminDashboard/>}/>
         </Routes>
       
       </BrowserRouter>
