@@ -1,2 +1,7 @@
-create new react project
+//create new react project
 npx create-react-app front-end
+
+//start npm
+npm start
+
+npm i react-router-dom
