@@ -5,8 +5,9 @@ import Boxes from "../components/base/Boxes";
 import UserReportHeader from "../components/admin/UserReportHeader";
 import ReportBody from "../components/admin/ReportBody";
 import FormModel from "../components/admin/FormModel";
-
+import {useCheckNetwork} from '../hooks/useCheckNetwork.js'
 const AdminDashboard = () => {
+    const isOnline = useCheckNetwork()
     const [isOpenAdd, setisOpenAdd] = useState(false);
     const [editData, seteditData] = useState([]);
     const triggerAddForm = () => {
@@ -19,13 +20,14 @@ const AdminDashboard = () => {
   
   return (
     <>
+    {<h1>{isOnline ? '✅ Online' : '❌ Disconnected'}</h1>}
       <Header />
       <div className="flex main-container">
         <NavContainer />
         <div className="main">
           <Boxes />
           <div className="report-container">
-            <UserReportHeader />
+            <UserReportHeader triggerAdd={triggerAddForm} />
             <ReportBody />
           </div>
         </div>
