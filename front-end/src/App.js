@@ -6,15 +6,22 @@ import "./styles/base/base.css";
 import "./styles/base/flex.css";
 import "./styles/pages/dashboard.css";
 
+import UserProvider from './context/usersContext';
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
+
+      <UserProvider>
+
         <Routes>
 
           <Route path='/test' element={<AdminDashboard/>}/>
         </Routes>
-      
+
+        </UserProvider>
+
       </BrowserRouter>
     
     </div>
