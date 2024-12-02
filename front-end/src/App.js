@@ -1,12 +1,18 @@
+import AdminDashboard from './pages/AdminDashboard';
 import './styles/App.css';
-import {Router,Routes,BrowserRouter} from'react-router-dom'
+import {Route,Routes,BrowserRouter} from'react-router-dom'
+import "./styles/base/color.css";
+import "./styles/base/base.css";
+import "./styles/base/flex.css";
+import "./styles/pages/dashboard.css";
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
 
-          <Router path='/' elemment={<></>}/>
+          <Route path='/' elemment={<AdminDashboard/>}/>
         </Routes>
       
       </BrowserRouter>
